@@ -2,15 +2,18 @@
 <html xmlns:th="http://wwww.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
+<link href="css/style.css" rel="stylesheet" />
 <title>Seguridad</title>
 </head>
 <body>
+	<div class = "contenedor">
       <form method="post" th:action="@{/seguridad}" th:object="${robot}">    		
-		<label>Marcar si eres un robot</label>	
-          <input type="radio" th:field ="*{soyRobot}" th:value="${false}">
-          <span th:errors= "*{soyRobot}" style="color: #E81505"></span><br>
-          <input type="submit" value="Aceptar"><br>
+		<label class= "robot">Marcar si eres un robot</label>	
+        <input type="radio" th:field ="*{soyRobot}" th:value="${false}">
+        <span th:errors= "*{soyRobot}" style="color: #E81505"></span><br>
+        <input class="btnSubmit" type="submit" value="Aceptar"><br>
 	  </form>
-	  <input type="button" onClick = "location.href='/producto';" value="Regresar">
+	  <input class="btnRegresar" type="button" onClick = "location.href='/producto';" value="Regresar">
+	  </div>
 </body>
 </html>
